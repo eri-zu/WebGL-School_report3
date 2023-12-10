@@ -1,0 +1,125 @@
+@charset "utf-8";
+@use "sass:math";
+
+@import "./_init/import";
+@import "./_init/reset"; // リセットCSS、フォントサイズ sss
+
+* {
+  font-family: "Russo One", sans-serif;
+}
+
+.canvaswrap {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.3);
+
+  canvas {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.btnarea {
+  position: fixed;
+  left: auto;
+  right: auto;
+  bottom: 50px;
+  width: 100%;
+}
+
+.btns {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @include max(800) {
+    flex-direction: column;
+  }
+}
+
+.mainbtns {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.subbtns {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 40px;
+
+  @include max(800) {
+    margin-left: 0px;
+    margin-top: 20px;
+  }
+}
+
+.swingbtns {
+  margin-left: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @include max(800) {
+    margin-left: 24px;
+  }
+}
+
+.btn {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  cursor: pointer;
+  font-size: 14px;
+
+  &:nth-child(n + 2) {
+    margin-left: 16px;
+
+    @include max(800) {
+      margin-left: 24px;
+    }
+  }
+
+  @include max(800) {
+    width: 108px;
+  }
+}
+
+.main {
+  background-color: #fff;
+  color: #222;
+  border-radius: 8px;
+  padding: 8px 20px;
+
+  @include max(800) {
+    flex-grow: 1;
+    text-align: center;
+  }
+
+  &.btn__power {
+    background-color: #dc2626f1;
+    color: #fff;
+  }
+
+  &.btn__swing {
+    background-color: #178dd7f1;
+    color: #fff;
+  }
+}
+
+.shadow {
+  position: absolute;
+  top: 6px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #222;
+  z-index: -1;
+  border-radius: 8px;
+}
