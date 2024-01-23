@@ -1,16 +1,17 @@
 # Overview
 
-WebGL スクール第二回講義の課題
+WebGL スクール第三回講義の課題
 
 # Requirement
 
-・three.js の Group を駆使して「首振り機能つきの扇風機」を実現してみましょう。<br>
-・形状は適当でも構わないですし複雑じゃなくてよいので、とにかく「回転す
-る羽」と「首振り」という２つの現象を再現してみましょう
+・地球上を飛ぶ旅客機（を模した Box や Plane 等で可）の動きを実現し
+てみましょう。<br>
+・課題の実装ポイントは「旅客機のような見た目ではな
+く」、あくまでも「旅客機のような動き」です。
 
 # URL
 
-https://eri-zu.github.io/WebGL-School_report2/dist/
+https://eri-zu.github.io/WebGL-School_report3/dist/
 
 # Inspired by
 
