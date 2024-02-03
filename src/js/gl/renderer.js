@@ -10,7 +10,8 @@ export class Renderer {
 
   static get RENDERER_PARAM() {
     return {
-      clearColor: new Color("rgba(249, 244, 209)"),
+      clearColor: new Color("rgba(12, 10, 82)"),
+      // clearColor: new Color("rgba(0, 0, 0)"),
       width: window.innerWidth,
       height: window.innerHeight,
     };

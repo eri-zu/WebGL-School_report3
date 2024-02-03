@@ -13,7 +13,10 @@ WebGL スクール第三回講義の課題
 
 https://eri-zu.github.io/WebGL-School_report3/dist/
 
-# Inspired by
+# reference
+
+https://ics.media/entry/10657/
+https://ics.media/entry/15467/
 
 # Getting Started
 

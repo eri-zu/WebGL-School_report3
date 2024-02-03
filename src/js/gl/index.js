@@ -4,14 +4,14 @@ import { Camera } from "./perspectiveCamera";
 // import { Camera } from "./orthographicCamera";
 import { Obj } from "./obj/obj";
 import { OrbitControls } from "three/addons/controls/OrbitControls.js";
-// import { Light } from "./light";
+import { Light } from "./light";
 
 export class Gl {
   constructor(wrap) {
     this.wrap = wrap;
 
     this.isLoaded = false;
-    this.isHelper = false;
+    this.isHelper = true;
 
     this.init();
   }
@@ -24,18 +24,18 @@ export class Gl {
     this.renderer = new Renderer(this.canvas);
     this.scene = new Scene();
     this.camera = new Camera();
-    // this.light = new Light();
+    this.light = new Light();
     this.obj = new Obj(texture);
 
-    // this.scene.add(this.light.instance);
-    this.scene.add(this.obj.mesh);
+    this.scene.add(this.light.instance);
+    this.scene.add(this.obj.group);
 
     this.setUtility();
   }
 
   async load() {
     const loader = new TextureLoader();
-    const src = "/img/label.jpg";
+    const src = "/img/window.png";
 
     const p = new Promise((resolve) => {
       const texture = loader.load(src, () => {
